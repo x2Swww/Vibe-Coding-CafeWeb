@@ -1,0 +1,51 @@
+html {
+  scroll-behavior: smooth; /* กำหนดให้การเลื่อนหน้าเพจเป็นแบบนุ่มนวล */
+}
+
+body {
+  font-family: 'Line Seed Sans TH', sans-serif;
+}
+
+img {
+  display: block;
+}
+
+a,
+button,
+[role="button"] {
+  border-radius: 8px !important;
+}
+
+::selection {
+  background: #f7e7d7;
+  color: #7a4b2b;
+}
+
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero-image-wrap {
+  animation: floatSoft 3.2s ease-in-out infinite;
+}
+
+.hero-content {
+  animation: slideInLeft 0.8s ease-out both;
+}
